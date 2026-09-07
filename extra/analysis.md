@@ -167,4 +167,4 @@ At $(X,\tau_A)=(0,1)$, effort is zero in the baseline and $0.0153881355421$ with
 | Handwritten verification | Student photo pending | 5 | 15 |
 | Qualified policy interpretation | Proposition 13, p. 28 | notes only | 16 |
 
-The main deck has a title plus the four requested content slides. First-person slides are proposed presentation text based on AI-assisted work; the student should verify and adopt the argument personally. No image of handwriting or student experience has been fabricated.
+The main deck contains a title slide and four content slides. The extended deck develops the assumptions, derivations and interpretation. The handwritten-photo requirement remains pending.

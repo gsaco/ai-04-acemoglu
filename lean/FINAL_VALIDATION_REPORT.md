@@ -4,7 +4,7 @@
 
 **Diez enunciados públicos comprobados, sin huecos ni axiomas añadidos. Estado global: formalización parcial del paper, de alcance estático.** La compilación y la auditoría reproducible se registran en [audit/validation.json](audit/validation.json). La validación se refiere a los hashes de archivos guardados allí.
 
-La carpeta sigue la separación entre enunciados, pruebas y revisión semántica de [EconCSLib](https://gargnikhil.com/EconCSLib/) y la estructura de [ai-03-quispe](https://github.com/gsaco/ai-03-quispe). No importa EconCSLib, no afirma pertenecer a esa biblioteca y no simula los informes de sus agentes revisores. La dependencia matemática es mathlib, con versión y revisión fijadas.
+Los enunciados están en `PaperInterface.lean`, las pruebas correspondientes en `ProofInterface.lean` y la evidencia de validación en `audit/`. La dependencia matemática es mathlib, con versión y revisión fijadas.
 
 ## Comprobaciones ejecutadas
 
@@ -44,4 +44,4 @@ No se formalizan estados estacionarios, umbrales, estabilidad, resultados de bie
 - [Axiomas por resultado](audit/axioms.log).
 - [Verificador ejecutable](verify.py).
 
-La revisión semántica fue realizada por el mismo agente que escribió el código. No se afirma revisión humana, revisión multiagente independiente ni validación de los resultados empíricos del paper. Lean certifica las implicaciones formales; la correspondencia económica permanece explícita y revisable.
+Lean certifica las implicaciones formales. El mapa de correspondencia permite contrastar cada enunciado con el paper; no constituye una certificación independiente de esa correspondencia ni una validación empírica.

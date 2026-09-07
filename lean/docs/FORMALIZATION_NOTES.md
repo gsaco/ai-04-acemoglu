@@ -74,4 +74,4 @@ Este resultado no demuestra que exista un óptimo positivo para todos los parám
 
 ## Revisión semántica
 
-La comparación con §5 indica que los autores modifican la agregación, la información sintética y la tecnología de esfuerzo público, pero no dan valor productivo autónomo a la información contextual. Ese es un resultado de **lectura del documento**, no un teorema que Lean pueda certificar a partir de los axiomas matemáticos. La revisión de correspondencia en `audit/statement-map.md` es del mismo agente que escribió las pruebas; no se presenta como una auditoría humana o multiagente independiente.
+La comparación con §5 indica que los autores modifican la agregación, la información sintética y la tecnología de esfuerzo público, pero no dan valor productivo autónomo a la información contextual. Ese es un resultado de **lectura del documento**, no un teorema que Lean pueda certificar a partir de los axiomas matemáticos. El archivo `audit/statement-map.md` documenta la correspondencia entre los enunciados y las secciones del paper. Esa documentación es distinta de la comprobación de las pruebas por Lean.

@@ -30,4 +30,4 @@ Fuente: PDF suministrado `w34910.pdf`, NBER WP 34910, febrero de 2026. Huella en
 - La extensión está etiquetada como propia y preserva la normalización productiva.
 - No se oculta el problema de frontera $X=0$: se trata con dos enunciados separados.
 - “Diez pruebas completadas” significa diez tipos declarados demostrados. No significa todo el paper formalizado, ni equivalencia semántica certificada por un tercero.
-- Revisión de fuentes y de correspondencia: agente autor, no revisión humana independiente ni ejecución de los jueces de EconCSLib.
+- El mapa documenta la correspondencia con la fuente; no registra una certificación independiente de esa correspondencia.
