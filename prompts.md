@@ -255,3 +255,21 @@ Build completed successfully (3315 jobs).
 'AKO26.baselineBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]
 'AKO26.extensionBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]
 ```
+
+## Repository presentation refresh — user request, raw
+
+```text
+improve the repo in general the readme, with badges, banner, content, witht the results of the lean and main results, but do not include math notation
+```
+
+## Repository presentation refresh — assistant messages, raw
+
+```text
+I’ll refresh the README with a banner, badges, and a clearer account of the paper’s findings and Lean results, using plain language throughout.
+```
+
+```text
+The new README puts the paper’s findings and the ten Lean results up front, with their limits stated in plain language. The banner and badges are local files, and the badges link to the recorded checks rather than implying a live build status.
+
+I’m checking the graphics, links, and reported counts before finishing.
+```

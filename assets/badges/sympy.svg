@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="222" height="28" viewBox="0 0 222 28" role="img" aria-label="SymPy: 6 identities checked">
+  <title>SymPy: 6 identities checked</title>
+  <clipPath id="round"><rect width="222" height="28" rx="5"/></clipPath>
+  <g clip-path="url(#round)"><rect width="76" height="28" fill="#23313D"/><rect x="76" width="146" height="28" fill="#87603A"/></g>
+  <g fill="white" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="middle"><text x="38.0" y="18.5">SymPy</text><text x="149.0" y="18.5">6 identities checked</text></g>
+</svg>

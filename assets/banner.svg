@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">Better advice, weaker learning?</title>
+  <desc id="desc">A study of AI, human cognition and shared knowledge. Paper reading, static experiments and Lean verification.</desc>
+  <rect width="1280" height="360" rx="18" fill="#122733"/>
+  <path d="M0 342H1280" stroke="#5CD0C0" stroke-width="4"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="58" y="61" fill="#75D9CA" font-size="15" font-weight="700" letter-spacing="2.5">ECONOMICS OF ARTIFICIAL INTELLIGENCE</text>
+    <text x="56" y="135" fill="#F5F8FA" font-size="51" font-weight="700">Better advice,</text>
+    <text x="56" y="194" fill="#F5F8FA" font-size="51" font-weight="700">weaker learning?</text>
+    <text x="58" y="239" fill="#C5D2DA" font-size="20">AI, Human Cognition and Knowledge Collapse</text>
+    <text x="58" y="284" fill="#92AAB7" font-size="16">Acemoglu · Kong · Ozdaglar</text>
+    <text x="58" y="311" fill="#92AAB7" font-size="14">NBER Working Paper 34910 · 2026</text>
+    <path d="M833 225 L910 193 L990 168 L1070 121 L1162 77" fill="none" stroke="#75D9CA" stroke-width="4" stroke-linecap="round"/>
+    <path d="M833 99 L910 129 L990 168 L1070 191 L1162 215" fill="none" stroke="#E8AB78" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 9"/>
+    <g fill="#122733" stroke="#75D9CA" stroke-width="3">
+      <circle cx="833" cy="225" r="7"/><circle cx="910" cy="193" r="7"/><circle cx="990" cy="168" r="7"/><circle cx="1070" cy="121" r="7"/><circle cx="1162" cy="77" r="7"/>
+    </g>
+    <text x="834" y="273" fill="#75D9CA" font-size="17" font-weight="700">Better individual advice</text>
+    <text x="834" y="301" fill="#E8AB78" font-size="17">Weaker incentives to learn</text>
+    <text x="1162" y="325" fill="#92AAB7" font-size="11" text-anchor="end">Conceptual illustration</text>
+  </g>
+</svg>
