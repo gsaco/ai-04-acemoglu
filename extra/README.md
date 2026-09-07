@@ -1,0 +1,38 @@
+# Extra materials
+
+- `presentation-extended.tex` / `.pdf`: 16-slide explanation; dynamic sections explicitly read-only.
+- `analysis.md`: static derivation, conditions, Section 5 audit, own extension and evidence map.
+- `oral-notes.md`: five-minute script and likely questions.
+- `static_checks.py`: reproducible SymPy identities and numerical static comparative statics.
+- `requirements.txt`: versions used for the analysis.
+- `results/checks.json`: exact-zero symbolic residuals, numeric residuals, finite-difference checks and software versions.
+- `results/static_grid.csv`: all 444 numerical optima and fixed-X optimized utilities.
+- `figures/static_checks.pdf` / `.png`: original charts used in both decks.
+- `verification.md`: build and visual QA record.
+
+## Reproduce
+
+From the repository root, with Python 3.11 and a LaTeX installation including Beamer and Latin Modern:
+
+```sh
+python -m venv .venv
+.venv/bin/python -m pip install -r extra/requirements.txt
+.venv/bin/python extra/static_checks.py
+pdflatex -interaction=nonstopmode -halt-on-error presentation.tex
+pdflatex -interaction=nonstopmode -halt-on-error presentation.tex
+cd extra
+pdflatex -interaction=nonstopmode -halt-on-error presentation-extended.tex
+pdflatex -interaction=nonstopmode -halt-on-error presentation-extended.tex
+```
+
+The numerical script also works from any other directory. The decks share `slide-style.tex`; compile each TeX file from its own directory so relative asset paths resolve.
+
+The calculations use deterministic root-finding, not random draws. They do not iterate the public-precision recursion, find steady states or simulate welfare. The CSV's `value` column is optimized **static** utility, with the public precision shown in that row.
+
+## Handwritten photo
+
+Supply your own authentic JPEG at `hand/derivation.jpg`, then recompile **both** decks. The last main slide and extended slide 15 will replace their pending panels automatically. Check that the handwriting is readable after inclusion. This is the only outstanding assignment asset.
+
+## Audit artifacts
+
+Local render audits are in `audit-main/` and `audit-extended/`, each with `contact_sheet.png`, individual `pages/slide-*.png`, and `audit_report.md`. These large temporary directories are ignored by Git; the concise `verification.md` is retained. No screenshots of the source paper appear in the decks.

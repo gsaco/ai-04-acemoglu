@@ -1,0 +1,48 @@
+{
+  "scope": "Static only; no dynamic or steady-state reproduction.",
+  "versions": {
+    "python": "3.11.9",
+    "sympy": "1.14.0",
+    "scipy": "1.17.0",
+    "numpy": "1.26.4",
+    "matplotlib": "3.8.4"
+  },
+  "parameters": {
+    "alpha": 2.0,
+    "lam": 1.0,
+    "p": 1.0,
+    "dX": 0.6
+  },
+  "Delta_I_values": [
+    0,
+    0.15
+  ],
+  "normalization": "Delta_G = 1 - Delta_I - Delta_X",
+  "symbolic_residuals": {
+    "Gprime": "0",
+    "gprime": "0",
+    "FOC": "0",
+    "U_eX": "0",
+    "U_ea": "0",
+    "U_ee": "0"
+  },
+  "rows": 444,
+  "max_FOC_residual": 2.435551760271437e-15,
+  "baseline_e_X1_tau1": 0.04121874291453084,
+  "extension_e_X0_tau1": 0.015388135542055816,
+  "IFT_vs_finite_difference": {
+    "e_X": [
+      0.014174232639742526,
+      0.014174232640384863
+    ],
+    "e_tau": [
+      -0.029791204669066925,
+      -0.029791204669837864
+    ],
+    "value_tau": [
+      0.04121874291453085,
+      0.041218742918847084
+    ]
+  },
+  "interpretation": "Both cross-partial signs survive Delta_I > 0, but effort at X=0 is positive for finite tau_A. Fixed-X optimized utility increases with AI accuracy. These checks do not imply a long-run welfare theorem."
+}
