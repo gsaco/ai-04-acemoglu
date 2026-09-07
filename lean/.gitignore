@@ -1,0 +1,6 @@
+.lake/
+*.olean
+*.ilean
+*.trace
+!audit/build.log
+!audit/axioms.log

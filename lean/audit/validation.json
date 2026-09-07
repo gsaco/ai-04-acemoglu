@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-09-07T13:48:12.696083+00:00",
+  "lean_version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "paper_source": "sha256 matches",
+  "endpoint_count": 10,
+  "endpoint_axioms": {
+    "gaussianCalculus": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "observation1": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "generalizedObservation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "firstOrderCondition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "curvature": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "stationaryUniqueness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "conditionalResponseSigns": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "staticWelfare": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "baselineBoundary": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "extensionBoundary": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "local_axioms": 0,
+  "proof_holes": 0,
+  "native_decide_uses": 0,
+  "source_hashes": {
+    "Assumptions.lean": "0bc7af8f463042186095f453fa4e1be3a7a4af8b47170fdae5fb303ac1c413da",
+    "Audit.lean": "056496133a9421034c89f93ba8d78758ec9a8eaed4c1cf73018a359732913033",
+    "Gaussian.lean": "ecadcc5325b501a27db6eeaff8b7aba77bb0c88616323678d89a5301b4c65aee",
+    "MainTheorems.lean": "2f39a0e8373ceed7fead6d7f3baf36200d954b84fa9156e201f912e75b1a6b94",
+    "Model.lean": "2af18339f46a94475a8e6681d9877932a3e907f6a83e3a765a97c85e4a3ff1cb",
+    "PaperInterface.lean": "b427dbce0807657e6ca85be7a455eb3a1f60a9bac05defb16659f939b51f8e2a",
+    "ProofInterface.lean": "c9b302ebe1ee62dd7573e904ed4034805b8fdb02ae973dad734440a708357b5f",
+    "lakefile.toml": "7a063d444073199dbd18a86982de6fd63588e2166189e185e63fdb91550faae4",
+    "lake-manifest.json": "d44d716c2694cf2e028020bd69399c41bf99ef6d990e6eda94169debb735e67d",
+    "lean-toolchain": "ce4c4e3d87434b9663f46de25ce34b48a0cf0d392e0a320a0787b4674a2d7b61",
+    "verify.py": "6593dcd8ad1b8dd99796aec3c23a604aa8e6d2264d6ae6e50602bd9b24ca770c"
+  },
+  "nonvacuity": "Audit.lean checks admissible baseline/extension parameter witnesses and a feasible improvement.",
+  "semantic_review": "Source mapping reviewed by the authoring AI; not independently human certified.",
+  "scope": "Selected static endpoints, not full paper; no dynamics or steady-state welfare proof."
+}

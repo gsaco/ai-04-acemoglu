@@ -1,0 +1,24 @@
+{
+  "title": "AI, Human Cognition and Knowledge Collapse",
+  "authors": [
+    "Daron Acemoglu",
+    "Dingwen Kong",
+    "Asuman Ozdaglar"
+  ],
+  "version": "NBER Working Paper 34910, February 2026, supplied PDF",
+  "file": "../w34910.pdf",
+  "sha256": "10fa85cc57d8c28fe14922d603b93b642f0eb1fb456233cfcdadea9de3a19f30",
+  "scope": "Selected static results in Sections 3.1–3.5 and own Delta_I extension; dynamic results excluded.",
+  "inspiration": [
+    {
+      "url": "https://gargnikhil.com/EconCSLib/",
+      "repository": "https://github.com/nikhgarg/EconCSLib",
+      "local_reference_commit": "cf500b748ac63dbff55faf97d989d4935c8eff50"
+    },
+    {
+      "url": "https://github.com/gsaco/ai-03-quispe",
+      "local_reference_commit": "be68e0b79a82749e5daa55402d4de379a82080c4"
+    }
+  ],
+  "relationship": "Workflow/layout inspiration only; not an EconCSLib contribution, imported library, or result of its full audit pipeline."
+}

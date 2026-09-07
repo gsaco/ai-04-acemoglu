@@ -1,0 +1,16 @@
+name = "AKO26Static"
+version = "0.1.0"
+defaultTargets = ["AKO26Static"]
+
+[leanOptions]
+autoImplicit = false
+warningAsError = true
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.30.0-rc2"
+
+[[lean_lib]]
+name = "AKO26Static"
+roots = ["Gaussian", "Assumptions", "Model", "MainTheorems", "PaperInterface", "ProofInterface"]

@@ -1,0 +1,22 @@
+{
+  "status": "partially_formalized",
+  "declared_scope": "selected_static_results",
+  "proof_status": "passed",
+  "completed_endpoints": 10,
+  "local_axioms": 0,
+  "proof_holes": 0,
+  "source_sha256": "10fa85cc57d8c28fe14922d603b93b642f0eb1fb456233cfcdadea9de3a19f30",
+  "validation": "audit/validation.json",
+  "paper_interface": "PaperInterface.lean",
+  "proof_interface": "ProofInterface.lean",
+  "source_mapping": "audit/statement-map.md",
+  "independent_human_review": false,
+  "econcslib_full_pipeline_run": false,
+  "limitations": [
+    "No formal posterior-probability construction or proof of posterior-mean optimality.",
+    "No global optimizer existence theorem.",
+    "Implicit response signs conditional on differentiated FOC equations.",
+    "Static welfare theorem requires maximizer witnesses and fixes X.",
+    "No dynamics, steady states, collapse thresholds, or long-run welfare proof."
+  ]
+}

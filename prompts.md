@@ -203,3 +203,55 @@ Two useful **static** limiting checks:
   "interpretation": "Both cross-partial signs survive Delta_I > 0, but effort at X=0 is positive for finite tau_A. Fixed-X optimized utility increases with AI accuracy. These checks do not imply a long-run welfare theorem."
 }
 ```
+
+
+## Lean extension — user request, raw
+
+```text
+Haz ahora un folder con la comprobación en Lean usando [https://gargnikhil.com/EconCSLib/](https://gargnikhil.com/EconCSLib/) como inspiración puedes guiarte de mi anterior tarea: [https://github.com/gsaco/ai-03-quispe](https://github.com/gsaco/ai-03-quispe).
+```
+
+## Lean extension — assistant messages, raw
+
+```text
+Voy a revisar EconCSLib y la comprobación Lean de tu tarea anterior para crear una carpeta con las pruebas del problema estático y la extensión con ΔI > 0. Mantendré fuera la reproducción de los resultados dinámicos.
+```
+
+```text
+Lean ya acepta la construcción de la función gaussiana como una integral y las pruebas de que \(G'=g\), \(g>0\) y \(g'<0\). Esas propiedades quedan demostradas, no introducidas como supuestos.
+
+Ahora estoy conectándolas con el pago del agente. También estoy comprobando una afirmación más fuerte para ΔI > 0: que existe un esfuerzo positivo que mejora el pago frente a elegir cero.
+```
+
+```text
+Los diez resultados principales ya compilan: incluyen los signos de Observation 1, la curvatura, la unicidad de un punto estacionario interior y la mejora factible con ΔI > 0.
+
+La comparación de bienestar formalizada es estrictamente estática: mantiene fijo \(X\) y supone que existen los máximos que se comparan. Estoy dejando esa condición visible y revisando que las pruebas no contengan huecos ni axiomas añadidos.
+```
+
+## Lean extension — raw validation outputs
+
+The complete formal statements and proof terms are preserved in `lean/PaperInterface.lean` and `lean/ProofInterface.lean`; the following are actual tool outputs, not reconstructed claims.
+
+```text
+✔ [3309/3315] Built Gaussian (9.5s)
+✔ [3310/3315] Built Assumptions (3.1s)
+✔ [3311/3315] Built Model (3.1s)
+✔ [3312/3315] Built PaperInterface (3.3s)
+✔ [3313/3315] Built MainTheorems (3.6s)
+✔ [3314/3315] Built ProofInterface (3.0s)
+Build completed successfully (3315 jobs).
+```
+
+```text
+'AKO26.gaussianCalculus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AKO26.observation1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AKO26.generalizedObservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AKO26.firstOrderCondition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AKO26.curvature' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AKO26.stationaryUniqueness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AKO26.conditionalResponseSigns' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AKO26.staticWelfare' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AKO26.baselineBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AKO26.extensionBoundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
