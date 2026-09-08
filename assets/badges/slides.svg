@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="28" viewBox="0 0 220 28" role="img" aria-label="Slides: 5-minute presentation">
+  <title>Slides: 5-minute presentation</title>
+  <clipPath id="round"><rect width="220" height="28" rx="5"/></clipPath>
+  <g clip-path="url(#round)"><rect width="64" height="28" fill="#23313D"/><rect x="64" width="156" height="28" fill="#4E6172"/></g>
+  <g fill="white" font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="middle"><text x="32.0" y="18.5">Slides</text><text x="142.0" y="18.5">5-minute presentation</text></g>
+</svg>
