@@ -62,16 +62,29 @@ $\alpha-1\gtrless1/4$ regime; the optimum may be $\tau_A^*=0$.
 \end{frame}
 
 \begin{frame}{3 \enspace What I did: verify signs, test the hidden premise}
-\includegraphics[width=\textwidth,height=3.5cm,keepaspectratio]{extra/figures/static_checks.pdf}\par
-\small
-\textbf{Reproducible static checks:} SymPy identities + 444 numerical optima;
-maximum FOC residual $<2.5\times10^{-15}$.
+\claim{Lean checked 10 static results, with no proof holes or added axioms.}
+\begin{columns}[T]
+\begin{column}{.48\textwidth}
+\textbf{Verify the derivation}\par\medskip
+From the Gaussian integral: $G'$, $g'$, the FOC, payoff curvature and both cross-partials.
+\[
+ U_{eX}>0,\qquad U_{e\tau_A}<0.
+\]
+The signs survive with $\Delta_I>0$ for $X>0$ under the stated assumptions.
+\end{column}
+\begin{column}{.48\textwidth}
+\textbf{Test the hidden premise}\par\medskip
+Restore standalone value: $\Delta_I G(Y)$. At $X=e=0$,
+\[
+ U_e=\Delta_I\lambda_I g(\sigma^{-2}+\tau_A)>0.
+\]
+For $\Delta_I>0$ and finite AI precision, Lean proves that some $e>0$ improves on zero effort.
+\end{column}
+\end{columns}
 \medskip
-
-\textbf{Extension:} allow $\Delta_I=0.15$. Both signs survive, but at $X=0$,
-$\tau_A=1$, effort rises from $0$ to $0.01539$.
-\source{Own AI-assisted analysis in extra/static\_checks.py; $\alpha=2$, $\lambda_I=1$, $\sigma^{-2}=1$, $\Delta_X=.6$;
-$\Delta_G=1-\Delta_I-\Delta_X$. No dynamic results simulated.}
+\textbf{Scope:} static proofs only; Propositions 1--16 remain unformalized.
+\source{Lean 4 + mathlib; fresh build and axiom audit: 14 September 2026.\newline
+Proofs: lean/ProofInterface.lean. Results and full-paper coverage: lean/audit/.}
 \end{frame}
 
 \begin{frame}{4 \enspace Where I challenged the AI's reasoning}

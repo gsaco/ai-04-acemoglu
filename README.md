@@ -78,6 +78,8 @@ That separates a robust substitution mechanism from the stronger premise support
 
 [Validation report](lean/FINAL_VALIDATION_REPORT.md) · [Readable formal statements](lean/PaperInterface.lean) · [Source-to-proof map](lean/audit/statement-map.md) · [Machine-readable results](lean/audit/validation.json)
 
+[Fresh Lean verification and whole-paper coverage audit](lean/audit/full-paper-coverage.md): ten static endpoints rechecked on 14 September 2026; a result-by-result map identifies the work still required for Propositions 1–16.
+
 ## Computational evidence
 
 The static experiments check **six symbolic identities and 444 numerical choices**. Numerical solutions satisfy the optimality condition to machine precision, and independent finite-difference checks agree with the analytical responses. The examples preserve the production normalization when standalone value is introduced.

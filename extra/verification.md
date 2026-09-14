@@ -1,5 +1,15 @@
 # Verification record
 
+## 14 September 2026 — Lean evidence on main slide 4
+
+Rebuilt all six local Lean modules and reran `python3 lean/verify.py`: all ten public static endpoints passed, with no proof holes or added axioms. The pinned paper hash matches. See [the validation output](../lean/audit/validation.json) and [the whole-paper coverage audit](../lean/audit/full-paper-coverage.md).
+
+Replaced the SymPy/numerical evidence on PDF page 4 (content slide “3 — What I did”) with the verified Gaussian derivation, cross-partial signs and standalone-value boundary result. Updated the corresponding English oral script. The slide explicitly states that Propositions 1–16 remain unformalized.
+
+Recompiled the five-page main deck and inspected all five rendered pages. The final compilation has no overfull/underfull boxes, missing assets or unresolved references/citations. The supplied handwritten photograph remains on page 5. The extended deck and numerical experiments were not changed in this revision.
+
+The sections below preserve the earlier verification record. Their references to missing photographs and the numerical content of main slide 4 describe that earlier version.
+
 ## Deliverables and scope
 
 - Main source/PDF: `presentation.tex`, `presentation.pdf` — exactly 5 slides (title + four content slides), 16:9.
