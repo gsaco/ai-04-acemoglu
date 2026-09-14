@@ -1,6 +1,6 @@
 # Five-minute oral script
 
-Five-minute script organized by slide. The welfare claim is a hypothesis to evaluate. The final slide requires the handwritten derivation photo.
+Five-minute script organized by slide. The welfare claim is a hypothesis to evaluate. The final slide includes the student's handwritten derivation photo.
 
 **0:00–0:20 — Title.** This is Acemoglu, Kong and Ozdaglar’s paper on AI, human cognition and knowledge collapse. My question is why better advice for an individual might weaken the knowledge that everybody relies on. The repository link contains the source, computations and the longer explanation.
 
@@ -10,7 +10,7 @@ Five-minute script organized by slide. The welfare claim is a hypothesis to eval
 
 **2:35–3:35 — What I did.** I used Lean to check ten static proof endpoints, with no proof holes or added axioms. Starting from the Gaussian integral, the formalization derives the derivatives, first-order condition, payoff curvature and both cross-partials. I then restored a positive standalone return to context-specific information, which Section 5 does not do. Both cross-partial signs survive. At zero public knowledge, Lean also proves that some positive effort gives higher utility than zero effort. The substitution mechanism survives, while the exact zero-effort boundary depends on zero standalone value. These are static proofs: the paper's sixteen numbered propositions on dynamics, welfare and extensions remain unformalized.
 
-**3:35–5:00 — Where I challenged the reasoning.** [Show your genuine photo once supplied.] On paper I want to verify the derivative of g, the cross-partials, and the marginal return at zero public knowledge. The tempting extrapolation is that better AI must increase welfare. My verdict is narrower: yes at fixed public knowledge, but not necessarily in the long run. I checked the authors’ own extensions. They change aggregation, synthetic information and how effort creates public knowledge. They retain the assumption that context-specific knowledge alone is worthless. My extension preserves crowd-out but removes the reason for choosing exactly zero effort at zero inherited knowledge. That is not a new theorem saying AI always helps; it identifies which part of the collapse story is robust and which part needs the essential-input assumption.
+**3:35–5:00 — Where I challenged the reasoning.** [Show the handwritten photo.] The photo shows my Gaussian derivatives, baseline first-order condition and cross-partials. The extension's boundary calculation appears alongside it on the slide and is checked in Lean. The tempting extrapolation is that better AI must increase welfare. My verdict is narrower: yes at fixed public knowledge, but not necessarily in the long run. I checked the authors’ own extensions. They change aggregation, synthetic information and how effort creates public knowledge. They retain the assumption that context-specific knowledge alone is worthless. My extension preserves crowd-out but removes the reason for choosing exactly zero effort at zero inherited knowledge. That is not a new theorem saying AI always helps; it identifies which part of the collapse story is robust and which part needs the essential-input assumption.
 
 ## Short answers for questions
 

@@ -163,8 +163,8 @@ At $(X,\tau_A)=(0,1)$, effort is zero in the baseline and $0.0153881355421$ with
 | Dynamic regimes, read-only | Propositions 3 and 5, pp. 18, 20 | oral caveat | 9 |
 | Welfare distinction and conditions | §4.3, pp. 24–26 | 3, 5 | 10–11 |
 | Section 5 assumption audit | pp. 29–32 | 5 | 12 |
-| Own extension and computational checks | This repository, not a paper result | 4–5 | 13–14 |
-| Handwritten verification | Student photo pending | 5 | 15 |
+| Own extension and checks | This repository, not a paper result; Lean on main slide 4, numerical evidence on extended slide 14 | 4–5 | 13–14 |
+| Handwritten verification | Student-provided baseline derivation photo | 5 | 15 |
 | Qualified policy interpretation | Proposition 13, p. 28 | notes only | 16 |
 
-The main deck contains a title slide and four content slides. The extended deck develops the assumptions, derivations and interpretation. The handwritten-photo requirement remains pending.
+The main deck contains a title slide and four content slides. The extended deck develops the assumptions, derivations and interpretation. Both include the student's photograph of the baseline derivation. The extension and welfare verdict are presented separately; they are not written on the photographed page. The Lean proof scope and remaining whole-paper gaps are documented in [the coverage audit](../lean/audit/full-paper-coverage.md).

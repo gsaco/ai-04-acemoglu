@@ -45,7 +45,8 @@ def best(public, ai, standalone):
     return brentq(foc,0.,hi,args=(public,ai,standalone),xtol=1e-14)
 def value(public, ai, standalone):
     eff=best(public,ai,standalone)
-    return (1-standalone-PAR['dX'])*Gn(public)+(standalone+PAR['dX']*Gn(public))*Gn(PAR['p']+eff+ai)-eff**2/2
+    individual = PAR['p'] + PAR['lam'] * eff + ai
+    return (1-standalone-PAR['dX'])*Gn(public)+(standalone+PAR['dX']*Gn(public))*Gn(individual)-eff**PAR['alpha']/PAR['alpha']
 rows=[]
 for di in (0.,.15):
     for xx in np.linspace(0,2,101):
@@ -64,14 +65,15 @@ for di in (0.,.15):
     assert np.all(np.diff([r['effort'] for r in re]) > 0)
 # Independent numerical derivatives against the IFT and the envelope theorem.
 x0,a0,di0=1.,1.,0.
-e0=best(x0,a0,di0); y0=1+e0+a0; h=1e-5
+e0=best(x0,a0,di0); y0=PAR['p']+PAR['lam']*e0+a0; h=1e-5
 gp=lambda q: -(1+1/q)*gn(q)/2
-uee=PAR['dX']*Gn(x0)*gp(y0)-1
-ift_x=-PAR['dX']*gn(x0)*gn(y0)/uee
-ift_a=-PAR['dX']*Gn(x0)*gp(y0)/uee
+benefit0=di0+PAR['dX']*Gn(x0)
+uee=benefit0*PAR['lam']**2*gp(y0)-(PAR['alpha']-1)*e0**(PAR['alpha']-2)
+ift_x=-PAR['dX']*PAR['lam']*gn(x0)*gn(y0)/uee
+ift_a=-benefit0*PAR['lam']*gp(y0)/uee
 fd_x=(best(x0+h,a0,di0)-best(x0-h,a0,di0))/(2*h)
 fd_a=(best(x0,a0+h,di0)-best(x0,a0-h,di0))/(2*h)
-envelope=PAR['dX']*Gn(x0)*gn(y0)
+envelope=benefit0*gn(y0)
 fd_value=(value(x0,a0+h,di0)-value(x0,a0-h,di0))/(2*h)
 assert abs(ift_x-fd_x)<1e-8 and abs(ift_a-fd_a)<1e-8 and abs(envelope-fd_value)<1e-8
 report={

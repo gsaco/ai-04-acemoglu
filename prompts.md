@@ -1,6 +1,6 @@
 # Raw prompt and relevant answers
 
-This record preserves the actual homework request, unedited assistant messages selected for their substantive content, and raw generated analysis/output. It is not a reconstruction of an imaginary research conversation. The rejected welfare claim in the slides is a hypothesis tested, not a quotation attributed to an AI answer. No authentic handwriting photo has been provided.
+This record preserves the actual homework request, unedited assistant messages selected for their substantive content, and raw generated analysis/output. It is not a reconstruction of an imaginary research conversation. The rejected welfare claim in the slides is a hypothesis tested, not a quotation attributed to an AI answer. These historical exchanges predate the student's later photo, now stored at `hand/derivation.jpg` and included in both decks. Raw excerpts below are preserved as originally written.
 
 ## User request — raw
 

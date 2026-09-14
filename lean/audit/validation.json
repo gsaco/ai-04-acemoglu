@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "checked_at_utc": "2026-09-14T16:25:49.068850+00:00",
+  "checked_at_utc": "2026-09-14T16:58:29.180775+00:00",
   "lean_version": "Lean (version 4.30.0-rc2, arm64-apple-darwin24.6.0, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
   "paper_source": "sha256 matches",
   "endpoint_count": 10,
