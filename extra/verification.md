@@ -1,55 +1,55 @@
-# Verification record
+# Repository verification
 
-## 14 September 2026 — Lean evidence on main slide 4
+Audit completed on 14 September 2026 before the branch1-to-main merge.
 
-Rebuilt all six local Lean modules and reran `python3 lean/verify.py`: all ten public static endpoints passed, with no proof holes or added axioms. The pinned paper hash matches. See [the validation output](../lean/audit/validation.json) and [the whole-paper coverage audit](../lean/audit/full-paper-coverage.md).
+## Result and scope
 
-Replaced the SymPy/numerical evidence on PDF page 4 (content slide “3 — What I did”) with the verified Gaussian derivation, cross-partial signs and standalone-value boundary result. Updated the corresponding English oral script. The slide explicitly states that Propositions 1–16 remain unformalized.
+All executed checks pass. The repository meets the original assignment's file and presentation requirements: source paper, README, raw prompt record, one student-provided handwritten derivation photo, and a title slide plus four content slides. The extended deck and static experiments are additional material.
 
-Recompiled the five-page main deck and inspected all five rendered pages. The final compilation has no overfull/underfull boxes, missing assets or unresolved references/citations. The supplied handwritten photograph remains on page 5. The extended deck and numerical experiments were not changed in this revision.
+The proof coverage is explicitly partial: ten static Lean endpoints. Propositions 1–16, the Bayesian probability-space foundation and global optimizer existence are not formally proved. These limits are documented in [the whole-paper coverage audit](../lean/audit/full-paper-coverage.md); the original homework treats dynamic results as read-only.
 
-The sections below preserve the earlier verification record. Their references to missing photographs and the numerical content of main slide 4 describe that earlier version.
+## Checks performed
 
-## Deliverables and scope
+| Check | Result |
+|---|---|
+| Pinned Lean build and axiom audit | 10 endpoints pass; no proof holes, local axioms or `native_decide`. Only standard `propext`, `Classical.choice` and `Quot.sound` dependencies. |
+| Paper and Lean source integrity | Supplied PDF hash and checked source/configuration hashes match [validation.json](../lean/audit/validation.json). |
+| Fresh Python environment | Python 3.11.7; all packages in `requirements.txt` installed; `pip check` reports no broken requirements. |
+| Static symbolic and numerical verification | 6 symbolic residuals equal zero; 444 optimal choices; maximum FOC residual 2.4356e-15; effort and welfare signs pass; finite differences agree. |
+| Nonbaseline regression checks | Six cases across two parameter sets agree with the symbolic objective and an independent bounded optimizer. Learning productivity, prior precision and cost curvature were varied. |
+| Presentation builds | Main: 5 pages. Extended: 16 pages. Both 16:9, compiled with pdfLaTeX/TeX Live 2025. No overfull/underfull boxes, unresolved references/citations or missing files. |
+| Visual review | Both contact sheets and all 21 individual rendered pages inspected; no visible overlap, clipping or incorrectly oriented photographs. |
+| Repository assets | Local Markdown links, JSON/SVG syntax, required files and JPEG format checked. |
+| Git hygiene | Generated SyncTeX files removed from version control and ignored; whitespace/error checks pass. The deletion of the obsolete handwriting README on main is preserved. |
 
-- Main source/PDF: `presentation.tex`, `presentation.pdf` — exactly 5 slides (title + four content slides), 16:9.
-- Extended source/PDF: `extra/presentation-extended.tex`, `extra/presentation-extended.pdf` — 16 slides, 16:9.
-- Equations are typeset in LaTeX. Original static charts are vector PDF graphics. There are no overlays, animations, or screenshots of the paper.
-- The source document is the supplied February 2026 NBER WP 34910; citations use printed page numbers.
-- No dynamic paths, steady-state roots, collapse thresholds, or long-run welfare curves were simulated.
+The saved baseline numerical results are unchanged after the code fix; the report's Python version now records the fresh environment. Numerical evidence remains separate from formal Lean verification.
 
-## Compilation
+## Fixes made during the audit
 
-Compiled with pdfLaTeX (TeX Live 2025) using the academic-slide skill's compile helper, which repeats passes to stabilize references. Portable commands, from each source's own directory:
+- Removed hard-coded baseline constants from the numerical payoff and derivative checks so they use the declared prior precision, learning productivity and cost exponent consistently.
+- Corrected outdated statements that the handwritten photograph was missing, repaired the link to the hand folder, and updated the oral script and evidence map.
+- Clarified that existence of the interior optimum uses concavity and boundary incentives, and that payoff (rather than an optimum) is concave.
+- Updated the extended photo slide to distinguish the photographed baseline work from the separately presented extension and verdict.
+- Documented Python 3.11 setup and the workaround for an incompatible personal TeX package overriding the installed distribution.
+
+## Reproduction
+
+Follow [extra/README.md](README.md) for the pinned Python environment and both slide builds, and [lean/README.md](../lean/README.md) for Lean installation. The core checks from the repository root are:
 
 ```sh
-pdflatex -interaction=nonstopmode -halt-on-error presentation.tex
-pdflatex -interaction=nonstopmode -halt-on-error presentation.tex
+python3 lean/verify.py
+.venv/bin/python -m pip check
+.venv/bin/python extra/static_checks.py
 ```
 
-For the extended deck, use `presentation-extended.tex` from `extra/`.
+The decks were compiled twice from each source's directory with `pdflatex -interaction=nonstopmode -halt-on-error`. On this machine, `TEXMFHOME` was set to an empty temporary directory to avoid an incompatible personal `hyperref` package; no installed TeX files were modified.
 
-The final logs contain no overfull/underfull boxes, missing files, unresolved references/citations or remaining LaTeX warnings. Earlier vertical overflows were corrected by reducing chart height and trimming the final main slide's source line. An image-paragraph flow problem was corrected so text starts below, not beside, the charts.
+## Visual audit artifacts
 
-## Visual audit
+Local, ignored artifacts are in `extra/audit-main/` and `extra/audit-extended/`. Each contains `audit_report.md`, `contact_sheet.png` and individual PNGs under `pages/`. The source/PDF pairs are [presentation.tex](../presentation.tex) / [presentation.pdf](../presentation.pdf) and [presentation-extended.tex](presentation-extended.tex) / [presentation-extended.pdf](presentation-extended.pdf).
 
-Both contact sheets and every individual rendered slide were inspected: main slides 1–5, extended slides 1–16. Titles, equations, tables, charts, captions and footers are separated and within the slide margins. Chart labels were enlarged. The missing-photo panels are intentional and clearly labeled.
+The text-box heuristic flags the square-root glyph near “Welfare” on main page 3 and chart tick/axis-label bounding boxes on extended page 14. Individual-image inspection confirms these are bounding-box false positives. A temporary copy of the audit helper removed XML-forbidden control characters emitted by Poppler for one mathematical glyph; this changed only the parser input, not either PDF or its content.
 
-Audit artifacts are available locally at:
+## Handwritten evidence
 
-- `extra/audit-main/audit_report.md`, `extra/audit-main/contact_sheet.png`, `extra/audit-main/pages/`
-- `extra/audit-extended/audit_report.md`, `extra/audit-extended/contact_sheet.png`, `extra/audit-extended/pages/`
-
-The auditor's automatic text-box heuristic flags the radical near “Welfare” on main slide 3, and chart axis tick/label bounding boxes on main slide 4 / extended slide 14. Individual rendered-slide inspection confirms these are bounding-box false positives: the visible glyphs and labels do not overlap. They are retained in the raw reports rather than suppressed.
-
-The local Poppler extractor emitted an invalid XML control character in a math glyph on the extended deck. A temporary copy of the audit helper sanitized XML-forbidden control characters before parsing; the PDF and its rendered pages were unchanged. That allowed the text-box scan to finish. This workaround was for the audit parser, not the presentation content.
-
-## Mathematical checks
-
-`extra/static_checks.py` verifies six exact SymPy identities and 444 static optima. The maximum absolute FOC residual is approximately 2.436e-15. Comparative statics and the fixed-X envelope derivative are checked against central finite differences at an interior point. Numerical grid signs are consistent with the symbolic expressions. All checks pass; exact results and package versions are stored in `extra/results/checks.json`.
-
-Production normalization is preserved when Delta_I is varied by adjusting Delta_G. The program contains no public-precision recursion or steady-state solver. The machine-readable welfare field is fixed-state static utility only.
-
-## Outstanding requirement
-
-**The submission is not complete until the student supplies a real photo of a derivation done by hand.** Save it as `hand/derivation.jpg`, recompile both decks, and inspect that photo's readability on the final main slide and extended slide 15. The current panels are not evidence of handwritten work.
+The JPEG at [hand/derivation.jpg](../hand/derivation.jpg) appears on main page 5 and extended page 15. It documents the baseline Gaussian derivatives, FOC and cross-partials. The additional extension, fixed-variable labels, full sign-condition checklist and welfare verdict are not all on that photographed page; they are explained in the slides and analysis. The source photograph was not modified during this audit.

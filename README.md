@@ -21,7 +21,7 @@
 | [lean/audit/](lean/audit/statement-map.md) | Source mapping, validation results and build logs. |
 | [lean/docs/](lean/docs/FORMALIZATION_NOTES.md) | Explanation of the formalization and proof dependencies. |
 | [assets/](assets/) | README banner and badges. |
-| [hand/](hand/README.md) | Handwritten derivation photo and placement instructions. |
+| [hand/](hand/) | Student-provided photograph of the handwritten static derivation. |
 
 Start with the [five-minute presentation](presentation.pdf) for the argument, the [reading notes](extra/analysis.md) for details, or the [Lean report](lean/FINAL_VALIDATION_REPORT.md) for the verified results.
 
@@ -96,7 +96,7 @@ These are illustrative calculations, not estimates from data. Dynamic paths, col
 - **Lean verification:** follow [lean/README.md](lean/README.md).
 - **Prompt record:** [prompts.md](prompts.md) preserves the original exchanges.
 
-**Submission status:** the handwritten derivation photo is still missing. Both decks clearly mark its place; the image must document genuine work done by hand.
+**Handwritten evidence:** [the student's photograph](hand/derivation.jpg) is included on main slide 5 and extended slide 15. It covers the baseline derivatives, first-order condition and cross-partials. The standalone-value extension and welfare verdict appear in the slides and analysis; they are not on the photographed page.
 
 **Reading note:** in the supplied version, Section 2 is the literature review. The static model is in Sections 3.1–3.5, with Observation 1 in Section 3.4.
 

@@ -1,7 +1,7 @@
 {
   "scope": "Static only; no dynamic or steady-state reproduction.",
   "versions": {
-    "python": "3.11.9",
+    "python": "3.11.7",
     "sympy": "1.14.0",
     "scipy": "1.17.0",
     "numpy": "1.26.4",
